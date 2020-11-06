@@ -1,16 +1,16 @@
 require 'exercise1'
 
-# describe Note do
-#   let(:formatter) { double :formatter }
-#   subject { Note.new("title", "body", formatter)}
-#
-#   it "Formatter instance variable should receive .format when .display is called" do
-#     allow(formatter).to receive(:format)
-#     expect(formatter).to receive(:format)
-#     subject.display
-#   end
-#
-# end
+describe Note do
+  let(:formatter) { double :formatter }
+  subject { Note.new("title", "body", formatter)}
+
+  it "Formatter instance variable should receive .format when .display is called" do
+    allow(formatter).to receive(:format)
+    expect(formatter).to receive(:format)
+    subject.display
+  end
+
+end
 
 
 describe NoteFormatter do
